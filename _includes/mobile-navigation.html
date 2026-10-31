@@ -1,0 +1,9 @@
+<nav class="mobile-section-nav" aria-label="Page sections">
+  <a href="{{ base_path }}/#about-me">About</a>
+  {% for link in site.data.navigation.main %}
+    <a href="{% unless link.url contains 'http' %}{{ base_path }}{% endunless %}{{ link.url }}">{{ link.title }}</a>
+  {% endfor %}
+  <button type="button" data-mobile-theme-toggle aria-label="Toggle color theme">
+    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+  </button>
+</nav>

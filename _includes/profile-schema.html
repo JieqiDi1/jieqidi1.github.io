@@ -1,0 +1,29 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": {{ '/' | prepend: seo_url | append: '#profile' | jsonify }},
+  "url": {{ '/' | prepend: seo_url | jsonify }},
+  "name": {{ page.seo_title | default: site.title | jsonify }},
+  "description": {{ page.description | default: site.description | jsonify }},
+  "mainEntity": {
+    "@type": "Person",
+    "@id": {{ '/' | prepend: seo_url | append: '#person' | jsonify }},
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ '/' | prepend: seo_url | jsonify }},
+    "image": {{ site.author.avatar | prepend: '/images/' | prepend: seo_url | jsonify }},
+    "jobTitle": {{ site.author.bio | jsonify }},
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": {{ site.author.employer | jsonify }},
+      "url": "https://www.gatech.edu/"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Boston College",
+      "url": "https://www.bc.edu/"
+    },
+    "sameAs": {{ site.social.links | jsonify }}
+  }
+}
+</script>

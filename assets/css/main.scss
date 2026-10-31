@@ -41,3 +41,245 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+/* Keep the full affiliation visible in the author sidebar. */
+$author-sidebar-width: 260px;
+
+@include breakpoint($large) {
+  #main > .sidebar {
+    width: $author-sidebar-width;
+    max-width: $author-sidebar-width;
+  }
+
+  #main > .sidebar .author__avatar img {
+    display: block;
+    margin: 0 auto;
+    transform: translateX(-12px);
+  }
+
+  #main > .sidebar + .page,
+  #main > .sidebar ~ .archive {
+    width: calc(100% - #{$author-sidebar-width} - 2em);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.sidebar .author__urls .author__desktop {
+  white-space: normal;
+}
+
+/* Layout for the editable Publications and Talks Markdown pages. */
+.publications-content,
+.talks-content {
+  overflow-wrap: break-word;
+
+  h2, h3 {
+    margin: 1.75em 0 0.75em;
+    padding-bottom: 0.35em;
+    border-bottom: 1px solid var(--global-border-color);
+  }
+
+  ol { padding-left: 1.25em; }
+  li { padding-left: 0.25em; }
+  li > p { margin: 0.2em 0; line-height: 1.5; }
+  li > p:first-child { margin: 0 0 0.3em; }
+}
+
+.publications-content li { margin-bottom: 1.75em; }
+.talks-content ul,
+.teaching-content ul,
+.archive > #awards + ul,
+.teaching-content > p {
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+.talks-content li,
+.archive > #awards + ul > li,
+.teaching-content li { margin-bottom: 0.3em; }
+.talks-content li > p,
+.talks-content li > p:first-child,
+.archive > #awards + ul > li > p,
+.teaching-content li > p {
+  margin: 0;
+  line-height: inherit;
+}
+.talks-content h2, .talks-content h3 {
+  font-size: 1.15em;
+  line-height: 1.5;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Keep section headings visible beneath the fixed navigation. */
+#main h2[id],
+#main h3[id] {
+  scroll-margin-top: calc(#{$masthead-height} + 1em);
+}
+
+.archive > #talks,
+.archive > #awards,
+.archive > #teaching {
+  margin-top: 3em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+/* Give section tabs a blue accent, with a lighter shade in dark mode. */
+:root {
+  --section-tab-color: #043361;
+  --section-tab-hover-color: #08649a;
+}
+html[data-theme="dark"] {
+  --section-tab-color: #9bc9f2;
+  --section-tab-hover-color: #d0e7fb;
+}
+.greedy-nav .masthead__menu-item:not(.persist) > a {
+  color: var(--section-tab-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  &:hover,
+  &:focus-visible { color: var(--section-tab-hover-color); }
+
+  &::before { background: currentColor; }
+}
+.greedy-nav .hidden-links {
+  background: var(--global-bg-color);
+
+  &::after { border-color: var(--global-bg-color) transparent; }
+}
+
+/* Main section headings share the navigation's blue accent. */
+.archive > .page__title,
+.archive > h2,
+.archive > .publications-content > h2 {
+  color: var(--section-tab-color);
+  font-size: 1.65rem;
+  line-height: 1.3;
+}
+
+/* Keep teaching details compact beneath each role. */
+.teaching-content > p { margin: 0 0 0.4em; }
+
+/* Phone/tablet layout: centered profile followed by swipeable sticky tabs. */
+.mobile-section-nav { display: none; }
+
+@media (max-width: 924px) {
+  body { padding-top: 0 !important; }
+  .masthead { display: none; }
+
+  #main {
+    margin-top: 0;
+    padding: 0 1rem;
+  }
+
+  #main > .sidebar {
+    position: static;
+    float: none;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    overflow: visible;
+    margin: 0;
+    padding: 2rem 0 1.75rem !important;
+    text-align: center;
+  }
+
+  .sidebar .author__avatar,
+  .sidebar .author__content,
+  .sidebar .author__urls-wrapper {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  .sidebar .author__avatar img {
+    display: block;
+    width: 112px;
+    max-width: 112px;
+    height: auto;
+    margin: 0 auto 1rem;
+    transform: none;
+  }
+
+  .sidebar .author__name {
+    margin: 0 0 0.5rem;
+    color: var(--section-tab-color);
+    font-size: 1.6rem;
+  }
+
+  .sidebar .author__bio { font-size: 1rem; line-height: 1.5; }
+  .sidebar .author__urls-wrapper { cursor: default; }
+  .sidebar .author__urls-wrapper > button { display: none; }
+
+  .sidebar .author__urls {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 1rem;
+    position: static;
+    margin: 0.6rem 0 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    list-style: none;
+  }
+
+  .sidebar .author__urls::before,
+  .sidebar .author__urls::after { display: none; }
+  .sidebar .author__urls li { font-size: 0.875rem; line-height: 1.5; }
+  .sidebar .author__urls .author__desktop { display: block; flex-basis: 100%; }
+  .sidebar .author__urls a { margin: 0; padding: 0.25rem 0; }
+
+  .mobile-section-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    background: var(--global-bg-color);
+    border-top: 1px solid var(--global-border-color);
+    border-bottom: 1px solid var(--global-border-color);
+    margin: 0 0 1.75rem;
+    padding: 0.5rem 0;
+    scrollbar-width: thin;
+  }
+
+  .mobile-section-nav a,
+  .mobile-section-nav button {
+    flex: 0 0 auto;
+    display: block;
+    margin: 0;
+    padding: 0.6rem;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--section-tab-color);
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .mobile-section-nav a:hover,
+  .mobile-section-nav button:hover { color: var(--section-tab-hover-color); }
+  .mobile-section-nav :focus-visible { outline: 2px solid currentColor; outline-offset: -2px; }
+
+  #main > .archive {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  #main #about-me,
+  #main h2[id],
+  #main h3[id] { scroll-margin-top: 80px; }
+}
