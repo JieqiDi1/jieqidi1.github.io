@@ -27,6 +27,9 @@ You can also learn more about me on [LinkedIn](https://www.linkedin.com/in/jieqi
 {% capture publications_source %}{% include_relative publications.md %}{% endcapture %}
 {{ publications_source | split: '---' | shift | shift | join: '---' }}
 
+{% capture preprints_source %}{% include_relative preprints.md %}{% endcapture %}
+{{ preprints_source | split: '---' | shift | shift | join: '---' }}
+
 ## Talks and Presentations
 {: #talks }
 
