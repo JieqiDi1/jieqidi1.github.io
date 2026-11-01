@@ -10,7 +10,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. candidate in Operations Research at the [H. Milton Stewart School of Industrial and Systems Engineering](https://www.isye.gatech.edu/), Georgia Institute of Technology, advised by Professors [Sigrún Andradóttir](https://www.isye.gatech.edu/users/sigrun-andradottir) and [Hayriye Ayhan](https://www.isye.gatech.edu/users/hayriye-ayhan). I am also fortunate to collaborate with Prof. [Yuwei Zhou](https://yuweizhou3.github.io/), Prof. [Fei Gao](https://sites.google.com/view/feigao/home), and Prof. [Wenchang Zhang](https://www.wenchangzhang.com/) at the Kelley School of Business, Indiana University. Before joining Georgia Tech, I received a B.S. in Mathematics with a minor in Finance from Boston College in 2022.
+I am a Ph.D. candidate in Operations Research at the [H. Milton Stewart School of Industrial and Systems Engineering](https://www.isye.gatech.edu/), Georgia Institute of Technology, advised by Professors [Sigrún Andradóttir](https://www.isye.gatech.edu/users/sigrun-andradottir) and [Hayriye Ayhan](https://www.isye.gatech.edu/users/hayriye-ayhan). I am also fortunate to collaborate with Prof. [Fei Gao](https://sites.google.com/view/feigao/home), Prof. [Wenchang Zhang](https://www.wenchangzhang.com/), and Prof. [Yuwei Zhou](https://yuweizhou3.github.io/) at the Kelley School of Business, Indiana University. Before joining Georgia Tech, I received a B.S. in Mathematics with a minor in Finance from Boston College in 2022.
 
 My research focuses on stochastic modeling and its applications to sustainable and socially responsible operations. My interests include:
 
