@@ -14,7 +14,7 @@ author_profile: true
 ## Preprints
 {: #preprints }
 
-1. **[Food Waste in Omnichannel Grocery Retail: The Role of Buy Online and Pick Up In Store]({{ '/files/Food%20waste%20in%20omnichannel.pdf' | relative_url }})**
+1. **[Food Waste in Omnichannel Grocery Retail: The Role of Buy Online and Pick Up In Store]({{ '/files/Food%20waste%20in%20omnichannel.pdf' | relative_url }})** <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7682293" target="_blank" rel="noopener noreferrer">[SSRN]</a>
 
     **Jieqi Di**, Yuwei Zhou, Fei Gao
 
