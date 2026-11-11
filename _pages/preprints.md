@@ -20,7 +20,7 @@ author_profile: true
 
     *Under review.*
 
-2. **[Pricing in Queues with Abandonments: Optimal Policies and Practical Heuristics](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6713699)**
+2. **[Pricing in Queues with Abandonments: Optimal Policies and Practical Heuristics](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6713699)** <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6713699" target="_blank" rel="noopener noreferrer">[SSRN]</a>
 
     **Jieqi Di**, Sigrún Andradóttir, Hayriye Ayhan
 
