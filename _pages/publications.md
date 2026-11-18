@@ -19,7 +19,7 @@ author_profile: true
 
     Jiecheng Lu, **Jieqi Di**, Runhua Wu, Yuwei Zhou
 
-    *Neural Information Processing Systems (NeurIPS), 2026 — to appear.*
+    *Advances in Neural Information Processing Systems (NeurIPS), 2026 — to appear.*
 
 2. **[Computable PAC Learning of Continuous Features](https://doi.org/10.1145/3531130.3533330)**
 
